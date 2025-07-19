@@ -1,13 +1,17 @@
-require('dotenv').config(); 
+require('dotenv').config();
 
 const { Sequelize } = require('sequelize');
 
+// Optional: Logging to verify
+
+
 const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASS,
+  "railway", 
+  "root",
+  "YqimCkuiJptaSWnfYTPAPxJWLKcoPyoM",
   {
-    host: process.env.DB_HOST,
+    host: "metro.proxy.rlwy.net",
+    port: 38722,
     dialect: 'mysql',
     logging: false,
   }
